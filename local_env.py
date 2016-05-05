@@ -56,3 +56,6 @@ if args.action == 'create_env':
 
 if args.action == 'rebuild_env':
 	os.system("cd ~/authoriti/authoriti_env; docker-compose rm --all && docker-compose pull && docker-compose build --no-cache && docker-compose up -d --force-recreate")
+
+if args.action == 'rebuild_env':
+	os.system("cd ~/authoriti/authoriti_env; docker-compose rm --all")
