@@ -52,4 +52,4 @@ if args.action == 'create_env':
 	os.system("sudo service docker restart; sudo pip install docker-compose")
 	os.system("git clone https://%s@bitbucket.org/authdash/authoriti-dashboard-environment.git ~/authoriti/authoriti_env" % args.bitbucket_username)
 	os.system("git clone https://%s@bitbucket.org/authdash/authoriti-dashboard.git ~/authoriti/authoriti_dash" % args.bitbucket_username)
-	os.system("cd ~/authoriti/authoriti_env; docker-compose build; docker-compose up -d")
+	os.system("cd ~/authoriti/authoriti_env; docker-compose pull; docker-compose build; docker-compose up -d --force-recreate")
