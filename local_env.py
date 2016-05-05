@@ -58,5 +58,5 @@ if args.action == 'create_env':
 	os.system("sudo curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && sudo chmod +x /usr/local/bin/docker-machine")
 	os.system("git clone https://%s@bitbucket.org/authdash/authoriti-dashboard-environment.git ~/authoriti/authoriti_env" % args.bitbucket_username)
 	os.system("git clone https://%s@bitbucket.org/authdash/authoriti-dashboard.git ~/authoriti/authoriti_dash" % args.bitbucket_username)
-	os.system("docker-machine create -d virtualbox dev; docker-machine regenerate-certs dev;  eval $(docker-machine env dev)")
-	os.system("cd ~/authoriti/authoriti_env; docker-compose build; docker-compose up -d")
+	os.system("cd ~/authoriti/authoriti_env; docker-machine create -d virtualbox dev; docker-machine regenerate-certs dev;  eval $(docker-machine env dev)")
+	os.system("docker-compose build; docker-compose up -d")
