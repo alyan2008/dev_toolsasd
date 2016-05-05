@@ -19,9 +19,6 @@ parser.add_argument('--linux_username', type=str, required = True)
 
 args = parser.parse_args()
 
-if not os.geteuid() == 0:
-	sys.exit('Script must be run as root')
-
 platform = platform.dist()
 
 if platform[1] == "14.04" or platform[1] == "14.10":
