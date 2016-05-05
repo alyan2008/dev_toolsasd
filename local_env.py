@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-import subprocess
-from subprocess import STDOUT
 import hashlib
 from base64 import urlsafe_b64encode as encode
 from base64 import urlsafe_b64decode as decode
