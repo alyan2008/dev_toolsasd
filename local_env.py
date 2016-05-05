@@ -49,7 +49,7 @@ if args.action == 'create_env':
 	os.system("sudo ntpdate -s ntp.ubuntu.com")
 	os.system("sudo sh -c 'echo \"deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib\" >> /etc/apt/sources.list.d/virtualbox.list'")
 	os.system("wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -")
-	os.system("sudo apt-get update; sudo apt-get install -y virtualbox apt-transport-https ca-certificates python-pip git")
+	os.system("sudo apt-get update; sudo apt-get install -y virtualbox-5.0 apt-transport-https ca-certificates python-pip git")
         os.system("sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D")
         os.system("sudo touch /etc/apt/sources.list.d/docker.list; sudo chmod 777 /etc/apt/sources.list.d/docker.list;  echo \"%s\" > /etc/apt/sources.list.d/docker.list" % deb)
 	os.system("sudo apt-get update; sudo apt-get install docker-engine -y; sudo gpasswd -a %s docker" % args.linux_username)
