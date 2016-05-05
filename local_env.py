@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser()
 if not os.geteuid() == 0:
     sys.exit('Script must be run as root')
 
-parser.add_argument('--action', type=str, choices=['create_env', 'rebuild_env', 'destroy_env', 'rebuild_env_with_git'])
+parser.add_argument('--action', type=str, choices=['create_env', 'rebuild_env', 'destroy_env', 'rebuild_env_with_repo'])
 parser.add_argument('--bitbucket_username', type=str, required = True)
 parser.add_argument('--linux_username', type=str, required = True)
 
