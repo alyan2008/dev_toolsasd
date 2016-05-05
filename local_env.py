@@ -60,7 +60,7 @@ if args.action == 'create_env':
 if args.action == 'rebuild_env':
 	os.system("cd ~/authoriti/authoriti_env; docker-compose stop; docker-compose rm --all && docker-compose build; docker-compose up -d")
 
-if args.action == 'rebuild_env':
+if args.action == 'destroy_env':
 	os.system("cd ~/authoriti/authoriti_env; docker-compose stop; docker-compose rm --all")
 
 if args.action == 'rebuild_env_with_repo':
